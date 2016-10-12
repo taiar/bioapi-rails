@@ -1,0 +1,21 @@
+<%= render 'search_form' %>
+<hr>
+<h3>Resultado da busca por <%= @smarts %></h3>
+<p><%= @molecules.count %> encontrados</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Desenho</th>
+      <th>Smiles</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- @molecules.each do |m| %>
+    <tr>
+      <td><%= link_to "Ver molécula", print_path(m), class: 'nobr' %></td>
+      <td><%= m %></td>
+    </tr>
+    <%- end %>
+  </tbody>
+</table>
