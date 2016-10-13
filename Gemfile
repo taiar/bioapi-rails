@@ -2,13 +2,11 @@ source 'https://rubygems.org'
 
 gem 'openbabel'
 
-gem 'rubabel', path: '../rubabel'
+gem 'rubabel', git: 'https://github.com/taiar/rubabel.git'
 
 gem 'mini_magick'
 
 gem 'rails-assets-bootstrap', '3.3.7', source: 'https://rails-assets.org'
-
-gem 'byebug'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.7.1'
@@ -52,4 +50,9 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :production do
+  gem 'unicorn'
+  gem 'pg'
 end
