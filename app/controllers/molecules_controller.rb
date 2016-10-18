@@ -8,8 +8,11 @@ class MoleculesController < ApplicationController
   end
 
   def print
-    FileUtils.rm('public/mols/mol.svg')
-    mol = Rubabel[params[:id]]
-    mol.write(Rails.root.join('public/mols/').to_s << 'mol.svg')
+    smiles = params[:id]
+    @name = Digest::MD5.hexdigest(smiles)
+    unless File.exist?("public/mols/#{@name}.svg")
+      mol = Rubabel[smiles]
+      mol.write(Rails.root.join('public/mols/').to_s << "#{@name}.svg")
+    end
   end
 end
