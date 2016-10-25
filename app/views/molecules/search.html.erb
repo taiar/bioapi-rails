@@ -7,6 +7,8 @@
   <thead>
     <tr>
       <th>Desenho</th>
+      <th>Massa Molecular</th>
+      <th>Número de átomos</th>
       <th>Smiles</th>
     </tr>
   </thead>
@@ -14,6 +16,8 @@
     <%- @molecules.each do |m| %>
     <tr>
       <td><%= link_to "Ver molécula", print_path(m), class: 'nobr' %></td>
+      <td><%= m.exact_mass %></td>
+      <td><%= m.count %></td>
       <td><%= m %></td>
     </tr>
     <%- end %>

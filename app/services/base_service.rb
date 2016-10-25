@@ -16,13 +16,10 @@ class BaseService
     !!@@read
   end
 
-  def search_smart(smart_string)
-    smarts = Rubabel::Smarts.new(smart_string)
-    found = []
-    molecules.each do |m|
-      found << m if m.matches(smarts).count > 0
-    end
-    found
+  def search_smart(params)
+    smarts = Rubabel::Smarts.new(params[:smarts])
+    filter = BaseService::Filters.new(params)
+    molecules.select { |m| m.matches(smarts).count > 0 && filter.valid?(m) }
   end
 
   private

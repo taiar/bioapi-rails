@@ -8,5 +8,28 @@
     <a href="javascript:void(0);" onclick="add_smarts(this)" class="add-smarts" data-smarts-type="amina">Amina</a> |
     <a href="javascript:void(0);" onclick="add_smarts(this)" class="add-smarts" data-smarts-type="amida">Amida</a>
   </p>
+
+  <div class="row">
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="molecular_mass_start">Massa molecular mínima: </label>
+        <input type="text" name="molecular_mass_start" id="molecular_mass_start" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="molecular_mass_end">Massa molecular máxima: </label>
+        <input type="text" name="molecular_mass_end" id="molecular_mass_end" class="form-control">
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="form-group">
+        <label for="atom_number_start">Número mínimo de átomos: </label>
+        <input type="text" name="atom_number_start" id="atom_number_start" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="atom_number_end">Número máximo de átomos: </label>
+        <input type="text" name="atom_number_end" id="atom_number_end" class="form-control">
+      </div>
+    </div>
+  </div>
   <input type="submit" class="btn btn-default" value="Procurar">
 <% end  %>
