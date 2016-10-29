@@ -27,6 +27,7 @@ class BaseService::Filters::HydrogenBondDonor < BaseService::Filters::Filter
     end
   end
 
+  # this should be on a propper class
   def self.hbd(mol)
     mol.matches(BaseService::Filters::HydrogenBondDonor::HBD_SMARTS).count
   end

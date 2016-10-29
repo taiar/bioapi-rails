@@ -27,6 +27,7 @@ class BaseService::Filters::HydrogenBondAcceptor < BaseService::Filters::Filter
     end
   end
 
+  # this should be on a propper class
   def self.hba(mol)
     mol.matches(BaseService::Filters::HydrogenBondAcceptor::HBA_SMARTS).count
   end

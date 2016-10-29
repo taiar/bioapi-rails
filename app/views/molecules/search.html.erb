@@ -12,6 +12,7 @@
       <th>Número de anéis</th>
       <th>HBD</th>
       <th>HBA</th>
+      <th>LogP</th>
       <th>Smiles</th>
     </tr>
   </thead>
@@ -24,6 +25,7 @@
       <td><%= m.ob_sssr.count %></td>
       <td><%= BaseService::Filters::HydrogenBondDonor.hbd(m) %></td>
       <td><%= BaseService::Filters::HydrogenBondAcceptor.hba(m) %></td>
+      <td><%= '%.5f' % BaseService::Filters::LogP.logp(m) %></td>
       <td><%= m %></td>
     </tr>
     <%- end %>
