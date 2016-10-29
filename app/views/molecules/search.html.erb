@@ -17,7 +17,7 @@
     <%- @molecules.each do |m| %>
     <tr>
       <td><%= link_to "Ver molécula", print_path(m), class: 'nobr' %></td>
-      <td><%= m.exact_mass %></td>
+      <td><%= '%.2f' % m.exact_mass %></td>
       <td><%= m.count %></td>
       <td><%= BaseService::Filters::HydrogenBondDonor.hbd(m) %></td>
       <td><%= m %></td>
