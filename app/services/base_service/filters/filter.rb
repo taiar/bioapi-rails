@@ -1,5 +1,4 @@
 class BaseService::Filters::Filter
-
   attr_reader :lower, :upper
 
   def valid?(mol)

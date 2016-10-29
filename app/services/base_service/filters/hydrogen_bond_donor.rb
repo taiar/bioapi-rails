@@ -1,5 +1,4 @@
 class BaseService::Filters::HydrogenBondDonor < BaseService::Filters::Filter
-
   HBD_SMARTS = '[!#6;!H0]'
 
   def initialize(params)

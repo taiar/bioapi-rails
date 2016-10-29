@@ -1,5 +1,4 @@
 class BaseService::Filters::HydrogenBondAcceptor < BaseService::Filters::Filter
-
   HBA_SMARTS = '[!$([#6,F,Cl,Br,I,o,s,nX3,#7v5,#15v5,#16v4,#16v6,*+1,*+2,*+3])]'
 
   def initialize(params)

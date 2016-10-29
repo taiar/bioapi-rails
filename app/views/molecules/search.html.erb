@@ -9,6 +9,7 @@
       <th>Desenho</th>
       <th>Massa Molecular</th>
       <th>Número de átomos</th>
+      <th>Número de anéis</th>
       <th>HBD</th>
       <th>HBA</th>
       <th>Smiles</th>
@@ -20,6 +21,7 @@
       <td><%= link_to "Ver molécula", print_path(m), class: 'nobr' %></td>
       <td><%= '%.2f' % m.exact_mass %></td>
       <td><%= m.count %></td>
+      <td><%= m.ob_sssr.count %></td>
       <td><%= BaseService::Filters::HydrogenBondDonor.hbd(m) %></td>
       <td><%= BaseService::Filters::HydrogenBondAcceptor.hba(m) %></td>
       <td><%= m %></td>
