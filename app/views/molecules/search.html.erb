@@ -10,6 +10,7 @@
       <th>Massa Molecular</th>
       <th>Número de átomos</th>
       <th>HBD</th>
+      <th>HBA</th>
       <th>Smiles</th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
       <td><%= '%.2f' % m.exact_mass %></td>
       <td><%= m.count %></td>
       <td><%= BaseService::Filters::HydrogenBondDonor.hbd(m) %></td>
+      <td><%= BaseService::Filters::HydrogenBondAcceptor.hba(m) %></td>
       <td><%= m %></td>
     </tr>
     <%- end %>
