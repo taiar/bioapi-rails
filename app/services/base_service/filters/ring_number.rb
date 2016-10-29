@@ -1,2 +1,2 @@
-class BaseService::Filters::RingNumber
+class BaseService::Filters::RingNumber < BaseService::Filters::Filter
 end

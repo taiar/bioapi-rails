@@ -1,2 +1,2 @@
-class BaseService::Filters::LogP
+class BaseService::Filters::LogP < BaseService::Filters::Filter
 end

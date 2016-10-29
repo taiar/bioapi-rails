@@ -1,12 +1,7 @@
-class BaseService::Filters::AtomNumber
+class BaseService::Filters::AtomNumber < BaseService::Filters::Filter
   def initialize(params)
     @lower = params[:atom_number_start].presence
     @upper = params[:atom_number_end].presence
-  end
-
-  def valid?(mol)
-    @mol = mol
-    lower_bound && upper_bound
   end
 
   def lower_bound

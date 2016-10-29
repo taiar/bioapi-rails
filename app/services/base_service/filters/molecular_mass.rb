@@ -1,12 +1,7 @@
-class BaseService::Filters::MolecularMass
+class BaseService::Filters::MolecularMass < BaseService::Filters::Filter
   def initialize(params)
     @lower = params[:molecular_mass_start].presence
     @upper = params[:molecular_mass_end].presence
-  end
-
-  def valid?(mol)
-    @mol = mol
-    lower_bound && upper_bound
   end
 
   def lower_bound
