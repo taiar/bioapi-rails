@@ -7,8 +7,12 @@ class BaseService::Filters::HydrogenBondDonor < BaseService::Filters::Filter
     @upper = params[:hydrogen_bond_donor_end].presence
   end
 
+  def valid?(mol)
+    @bond_donnors = nil
+    super(mol)
+  end
+
   def lower_bound
-    puts bond_donnors
     unless @lower.nil?
       bond_donnors >= @lower.to_i
     else
@@ -31,6 +35,6 @@ class BaseService::Filters::HydrogenBondDonor < BaseService::Filters::Filter
   private
 
   def bond_donnors
-    BaseService::Filters::HydrogenBondDonor.hbd(@mol)
+    @bond_donnors ||= BaseService::Filters::HydrogenBondDonor.hbd(@mol)
   end
 end
