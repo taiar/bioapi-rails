@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<svg version="1.1" id="topsvg"
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns:cml="http://www.xml-cml.org/schema" x="0" y="0" width="200px" height="200px" viewBox="0 0 100 100">
+<title>ZINC25695575 - Open Babel Depiction</title>
+<rect x="0" y="0" width="100" height="100" fill="white"/>
+<g transform="translate(0,0)">
+<svg width="100" height="100" x="0" y="0" viewBox="0 0 342.157 250.448"
+font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="2"  stroke-linecap="round">
+<line x1="73.1" y1="172.3" x2="111.2" y2="172.3" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="73.1" y1="172.3" x2="51.3" y2="184.9" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="73.1" y1="172.3" x2="73.1" y2="197.4" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="73.1" y1="172.3" x2="60.5" y2="150.5" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="111.2" y1="172.3" x2="149.4" y2="106.1" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="111.2" y1="172.3" x2="133.1" y2="184.9" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="111.2" y1="172.3" x2="111.2" y2="197.4" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="149.4" y1="106.1" x2="187.6" y2="106.1" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="149.4" y1="106.1" x2="149.4" y2="81.0" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="149.4" y1="106.1" x2="127.6" y2="93.5" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<polygon points="187.611879 106.132849 183.611879 80.551031 191.611879 80.551031 " stroke-width="2.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<line x1="187.6" y1="106.1" x2="225.8" y2="106.1" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="187.6" y1="106.1" x2="187.6" y2="131.3" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="223.2" y1="104.6" x2="235.8" y2="82.8" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="228.4" y1="107.6" x2="241.0" y2="85.8" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="225.8" y1="106.1" x2="238.4" y2="127.9" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="257.9" y1="73.1" x2="270.1" y2="73.1" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="289.6" y1="61.8" x2="295.7" y2="51.3" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="257.9" y1="139.2" x2="270.1" y2="139.2" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="200.6" y1="144.3" x2="212.8" y2="144.3" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="187.6" y1="157.3" x2="187.6" y2="169.5" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<line x1="174.6" y1="144.3" x2="162.4" y2="144.3" stroke="rgb(0,0,0)"  stroke-width="2.0"/>
+<text x="67.066425" y="218.447516" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="143.430061" y="152.314667" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="181.611879" y="190.496485" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="219.793697" y="152.314667" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="277.066425" y="147.199274" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="296.157334" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="110.363636" y="95.041940" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="143.430061" y="75.951031" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="105.248243" y="218.447516" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="138.314667" y="199.356607" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="47.975515" y="147.199274" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="34.000000" y="199.356607" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="192.411879" y="140.282667" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >+</text>
+<text x="181.611879" y="152.314667" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >N</text>
+<text x="238.884606" y="147.199274" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="277.066425" y="81.066425" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="238.884606" y="81.066425" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >N</text>
+<text x="181.611879" y="75.951031" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+</svg>
+</g>
+<text font-size="18.000000" fill ="black" font-family="sans-serif"
+x="10.000000" y="20.000000" >ZINC25695575</text>
+</svg>
