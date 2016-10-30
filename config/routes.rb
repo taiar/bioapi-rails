@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     member do
       get :index
       get :search
+      post :react
     end
   end
   get 'molecules/:id/print' => 'molecules#print', as: :print

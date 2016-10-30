@@ -22,6 +22,14 @@ class BaseService
     molecules.select { |m| m.matches(smarts).count > 0 && filter.valid?(m) }
   end
 
+  def self.compress(base)
+    Base64.encode64(ActiveSupport::Gzip.compress(base.to_json))
+  end
+
+  def self.uncompress(base)
+    JSON.parse(ActiveSupport::Gzip.decompress(Base64.decode64(base)))
+  end
+
   private
 
   def base_file_path

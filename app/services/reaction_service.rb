@@ -18,13 +18,18 @@ class ReactionService
     unless File.directory?(@tmp_dir)
       Dir.mkdir(@tmp_dir)
     end
-    unless File.directory?(@tmp_dir)
+    unless File.directory?(@reaction_dir)
       Dir.mkdir(@reaction_dir)
     end
   end
 
+  def add_raw_base(content)
+    base = BaseService.uncompress(content)
+    add_base(base.each_with_index.map{ |x, i| "#{x} #{i}" }.join("\n"))
+  end
+
   def add_base(content)
-    @base[@base_pos] = content
+    @base << content
     write_base
     @base_pos += 1
   end
@@ -38,7 +43,7 @@ class ReactionService
   end
 
   def amide_formation
-    '[C:1](=[O:2])[Cl:3].[H:99][NH:4][C:0]>> [C:1](=[O:2])[NH:4][C:0].[Cl:3][H:99]'
+    '[C:1](=[O:2])[Cl:3].[H:99][NH:4][C:0]>>[C:1](=[O:2])[NH:4][C:0].[Cl:3][H:99]'
   end
 
   def example
