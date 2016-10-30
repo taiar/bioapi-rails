@@ -6,27 +6,31 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Desenho</th>
+      <th>Molécula</th>
+      <th>Fórmula</th>
+      <th>LogP</th>
       <th>Massa Molecular</th>
       <th>Número de átomos</th>
       <th>Número de anéis</th>
       <th>HBD</th>
       <th>HBA</th>
-      <th>LogP</th>
-      <th>Fórmula</th>
     </tr>
   </thead>
   <tbody>
     <%- @molecules.each do |m| %>
     <tr>
-      <td><%= link_to "Ver molécula", print_path(m), class: 'nobr' %></td>
+      <td>
+        <%= link_to print_path(m) do %>
+        <img src="<%= "/mols/#{molecule_image(m.smiles)}" %>">
+        <% end %>
+      </td>
+      <td><%= m.formula %></td>
+      <td><%= '%.5f' % BaseService::Filters::LogP.logp(m) %></td>
       <td><%= '%.2f' % m.exact_mass %></td>
       <td><%= m.count %></td>
       <td><%= m.ob_sssr.count %></td>
       <td><%= BaseService::Filters::HydrogenBondDonor.hbd(m) %></td>
       <td><%= BaseService::Filters::HydrogenBondAcceptor.hba(m) %></td>
-      <td><%= '%.5f' % BaseService::Filters::LogP.logp(m) %></td>
-      <td><%= m.formula %></td>
     </tr>
     <%- end %>
   </tbody>
