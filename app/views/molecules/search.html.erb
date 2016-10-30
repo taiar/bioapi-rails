@@ -1,37 +1,7 @@
 <%= render 'search_form' %>
 <hr>
-<h3>Resultado da busca por <%= @smarts %></h3>
-<p><%= @molecules.count %> encontrados</p>
+<h3>Resultado na Base 1 <%= @smarts_b1 %></h3>
+<p><%= @molecules_b1.count %> encontrados</p>
 
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Molécula</th>
-      <th>Fórmula</th>
-      <th>LogP</th>
-      <th>Massa Molecular</th>
-      <th>Número de átomos</th>
-      <th>Número de anéis</th>
-      <th>HBD</th>
-      <th>HBA</th>
-    </tr>
-  </thead>
-  <tbody>
-    <%- @molecules.each do |m| %>
-    <tr>
-      <td>
-        <%= link_to print_path(m) do %>
-        <img src="<%= "/mols/#{molecule_image(m.smiles)}" %>">
-        <% end %>
-      </td>
-      <td><%= m.formula %></td>
-      <td><%= '%.5f' % BaseService::Filters::LogP.logp(m) %></td>
-      <td><%= '%.2f' % m.exact_mass %></td>
-      <td><%= m.count %></td>
-      <td><%= m.ob_sssr.count %></td>
-      <td><%= BaseService::Filters::HydrogenBondDonor.hbd(m) %></td>
-      <td><%= BaseService::Filters::HydrogenBondAcceptor.hba(m) %></td>
-    </tr>
-    <%- end %>
-  </tbody>
-</table>
+<h3>Resultado na Base 2 <%= @smarts_b2 %></h3>
+<p><%= @molecules_b2.count %> encontrados</p>

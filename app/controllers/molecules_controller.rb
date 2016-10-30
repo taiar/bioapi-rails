@@ -3,8 +3,10 @@ class MoleculesController < ApplicationController
   end
 
   def search
-    @molecules = BaseService.instance.search_smart(params)
-    @smarts = params[:smarts]
+    @molecules_b1 = BaseService.instance.search_smart(params[:base1])
+    @molecules_b2 = BaseService.instance.search_smart(params[:base2])
+    @smarts_b1 = params[:base1][:smarts]
+    @smarts_b2 = params[:base2][:smarts]
   end
 
   def print
