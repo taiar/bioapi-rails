@@ -5,3 +5,23 @@ body {
 .starter-template {
   padding-top: 40px;
 }
+
+table#filters-table {
+  text-align: center;
+  th {
+    text-align: center;
+  }
+  tbody {
+    tr {
+      td {
+
+    text-align: center;
+      }
+    }
+  }
+  td {
+  }
+  input {
+    width: 50%;
+  }
+}

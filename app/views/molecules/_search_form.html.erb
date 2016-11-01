@@ -1,31 +1,11 @@
 <%= form_tag(search_molecules_path, method: "get") do %>
   <div class="row">
     <div class="col-md-6">
-      <div class="form-group">
-        <label for="smarts1">Insira o Smarts que deseja procurar na Base 1:</label>
-        <input type="text" class="form-control" id="smarts1" name="base1[smarts]" placeholder="Exemplo: [CX3](=O)[OX2H1] (Ácido carboxílico)">
-      </div>
-      <p>
-        Alguns padrões pré-definidos: <a href="javascript:void(0);" onclick="add_smarts(this, 'smarts1')" class="add-smarts" data-smarts-type="carboxilico">Ácido carboxílico</a> |
-        <a href="javascript:void(0);" onclick="add_smarts(this, 'smarts1')" class="add-smarts" data-smarts-type="amina">Amina</a> |
-        <a href="javascript:void(0);" onclick="add_smarts(this, 'smarts1')" class="add-smarts" data-smarts-type="amida">Amida</a>
-      </p>
+      <%= render partial: 'filters', locals: { base: 'base2' } %>
     </div>
     <div class="col-md-6">
-      <div class="form-group">
-        <label for="smarts2">Insira o Smarts que deseja procurar na Base 2:</label>
-        <input type="text" class="form-control" id="smarts2" name="base2[smarts]" placeholder="Exemplo: [CX3](=O)[OX2H1] (Ácido carboxílico)">
-      </div>
-      <p>
-        Alguns padrões pré-definidos: <a href="javascript:void(0);" onclick="add_smarts(this, 'smarts2')" class="add-smarts" data-smarts-type="carboxilico">Ácido carboxílico</a> |
-        <a href="javascript:void(0);" onclick="add_smarts(this, 'smarts2')" class="add-smarts" data-smarts-type="amina">Amina</a> |
-        <a href="javascript:void(0);" onclick="add_smarts(this, 'smarts2')" class="add-smarts" data-smarts-type="amida">Amida</a>
-      </p>
+      <%= render partial: 'filters', locals: { base: 'base1' } %>
     </div>
-  </div>
-  <div class="row">
-    <%= render partial: 'filters', locals: { base: 'base2' } %>
-    <%= render partial: 'filters', locals: { base: 'base1' } %>
   </div>
   <input type="submit" class="btn btn-default" value="Procurar">
 <% end  %>
