@@ -1,12 +1,13 @@
 <div class="flow">
   <div class="form-group">
-    <label for="<%= base %>_smarts">Insira o Smarts que deseja procurar na Base 2:</label>
-    <input type="text" id="<%= base %>_smarts" name="<%= base %>[smarts]" placeholder="Exemplo: [CX3](=O)[OX2H1] (Ácido carboxílico)" class="form-control">
+    <label for="<%= base %>_smarts"><%= t('smarts_or_functional_group') %>:</label>
+    <input type="text" id="<%= base %>_smarts" name="<%= base %>[smarts]" placeholder="<%= t('smarts_example') %>" class="form-control">
   </div>
   <p>
-    Alguns padrões pré-definidos: <a href="javascript:void(0);" onclick="add_smarts(this, '<%= base %>_smarts')" class="add-smarts" data-smarts-type="carboxilico">Ácido carboxílico</a> |
-    <a href="javascript:void(0);" onclick="add_smarts(this, '<%= base %>_smarts')" class="add-smarts" data-smarts-type="amina">Amina</a> |
-    <a href="javascript:void(0);" onclick="add_smarts(this, '<%= base %>_smarts')" class="add-smarts" data-smarts-type="amida">Amida</a>
+    <%= t('functional_groups') %>:
+    <a href="javascript:void(0);" onclick="add_smarts(this, '<%= base %>_smarts')" class="add-smarts" data-smarts-type="carboxilico"><%= t 'carboxylic_acid' %></a> |
+    <a href="javascript:void(0);" onclick="add_smarts(this, '<%= base %>_smarts')" class="add-smarts" data-smarts-type="amina"><%= t 'amine' %></a> |
+    <a href="javascript:void(0);" onclick="add_smarts(this, '<%= base %>_smarts')" class="add-smarts" data-smarts-type="amida"><%= t 'amide' %></a>
   </p>
 </div>
 <div class="row">
@@ -15,7 +16,7 @@
     <thead>
       <tr>
         <th>Min</th>
-        <th>Property</th>
+        <th><%= t 'property' %></th>
         <th>Máx</th>
       </tr>
     </thead>
@@ -24,14 +25,14 @@
         <td>
           <input type="text" name="<%= base %>[molecular_mass_start]" id="<%= base %>[molecular_mass_start]">
           </td>
-        <td>Mass</td>
+        <td><%= t 'mass' %></td>
         <td><input type="text" name="<%= base %>[molecular_mass_end]" id="<%= base %>[molecular_mass_end]"></td>
       </tr>
       <tr>
         <td>
           <input type="text" name="<%= base %>[atom_number_start]" id="<%= base %>[atom_number_start]">
           </td>
-        <td># Atoms</td>
+        <td># <%= t 'atoms' %></td>
         <td><input type="text" name="<%= base %>[atom_number_end]" id="<%= base %>[atom_number_end]"></td>
       </tr>
       <tr>
@@ -52,7 +53,7 @@
         <td>
           <input type="text" name="<%= base %>[ring_number_start]" id="<%= base %>[ring_number_start]">
           </td>
-        <td># Rings</td>
+        <td># <%= t 'rings' %></td>
         <td><input type="text" name="<%= base %>[ring_number_end]" id="<%= base %>[ring_number_end]"></td>
       </tr>
       <tr>

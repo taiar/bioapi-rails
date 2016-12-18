@@ -1,11 +1,11 @@
 <%= form_tag(search_molecules_path, method: "get") do %>
   <div class="row">
     <div class="col-md-6">
-      <%= render partial: 'filters', locals: { base: 'base2' } %>
-    </div>
-    <div class="col-md-6">
       <%= render partial: 'filters', locals: { base: 'base1' } %>
     </div>
+    <div class="col-md-6">
+      <%= render partial: 'filters', locals: { base: 'base2' } %>
+    </div>
   </div>
-  <input type="submit" class="btn btn-default" value="Procurar">
+  <input type="submit" class="btn btn-default" value="<%= t 'search' %>">
 <% end  %>

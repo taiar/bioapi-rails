@@ -20,4 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  title: "Reaction base"
+  title_home: "Search in reaction base"
+  smarts_or_functional_group: "Provide the SMARTS or select a funcional group to search"
+  smarts_example: 'Example: [CX3](=O)[OX2H1] (Carboxylic acid)'
+  functional_groups: "Some functional groups"
+  carboxylic_acid: 'Carboxylic acid'
+  amine: 'Amine'
+  amide: 'Amide'
+  property: 'Property'
+  mass: 'Mass'
+  atoms: 'Atoms'
+  rings: 'Rings'
+  search: 'Search'
