@@ -30,6 +30,13 @@ class BaseService
     JSON.parse(ActiveSupport::Gzip.decompress(Base64.decode64(base)))
   end
 
+  def self.valid_smarts(smarts)
+    Rubabel::Smarts.new(smarts)
+    true
+  rescue StandardError => _
+    false
+  end
+
   private
 
   def base_file_path

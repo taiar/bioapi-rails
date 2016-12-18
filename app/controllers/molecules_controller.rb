@@ -3,6 +3,9 @@ class MoleculesController < ApplicationController
   end
 
   def search
+    redirect_to root_path, flash: { error: I18n.t('error.insert_smarts') } and return unless params[:base1][:smarts].present? || params[:base2][:smarts].present?
+    redirect_to root_path, flash: { error: I18n.t('error.invalid_smarts') } and return unless BaseService::valid_smarts(params[:base1][:smarts]) && BaseService::valid_smarts(params[:base2][:smarts])
+
     @molecules_b1 = BaseService.instance.search_smart(params[:base1])
     @molecules_b2 = BaseService.instance.search_smart(params[:base2])
     @dump_b1 = BaseService.compress(@molecules_b1.map{ |m| m.smiles })

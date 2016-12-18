@@ -42,6 +42,8 @@
 
     <div class="container">
       <div class="starter-template">
+        <%- if flash[:error].present? %><p class="alert alert-danger"><%= flash[:error] %></p><%- end %>
+        <%- if flash[:notice].present? %><p class="alert alert-success"><%= flash[:notice] %></p><%- end %>
         <%= yield %>
       </div>
     </div>

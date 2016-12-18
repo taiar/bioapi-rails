@@ -33,3 +33,6 @@ en:
   atoms: 'Atoms'
   rings: 'Rings'
   search: 'Search'
+  error:
+    insert_smarts: 'Please insert a SMARTS pattern or select a functional group to search.'
+    invalid_smarts: 'Please insert a valid SMARTS pattern.'
