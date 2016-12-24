@@ -42,6 +42,10 @@ class ReactionService
     `#{@reactor.to_s} '#{@reaction}' #{@reaction_dir}/0 #{@reaction_dir}/1`
   end
 
+  def generate_spreadsheet
+
+  end
+
   def amide_formation
     '[C:1](=[O:2])[Cl:3].[H:99][NH:4][C:0]>>[C:1](=[O:2])[NH:4][C:0].[Cl:3][H:99]'
   end
