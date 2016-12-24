@@ -1,10 +1,18 @@
 <%= render 'search_form' %>
 <hr>
 <h3><%= t 'results_from' %> Base 1 <%= @smarts_b1 %></h3>
-<p><%= @molecules_b1.count %> <%= t 'found' %></p>
+<p>
+  <%= @molecules_b1.count %> <%= t 'found' %>
+  <a class="ui-togglr" data-target="base_1_table">(<%= t 'toggle_results' %>)</a>
+</p>
+<%= render partial: 'molecules_table', locals: { molecules: @molecules_b1, id: 'base_1_table' } %>
 
 <h3><%= t 'results_from' %> Base 2 <%= @smarts_b2 %></h3>
-<p><%= @molecules_b2.count %> <%= t 'found' %></p>
+<p>
+  <%= @molecules_b2.count %> <%= t 'found' %>
+  <a class="ui-togglr" data-target="base_2_table">(<%= t 'toggle_results' %>)</a>
+</p>
+<%= render partial: 'molecules_table', locals: { molecules: @molecules_b2, id: 'base_2_table' } %>
 
 <%= form_tag react_molecules_path, method: 'post' do %>
   <input type="hidden" name="b1" value="<%= @dump_b1 %>" />
