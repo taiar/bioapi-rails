@@ -23,7 +23,7 @@ class ReactionService
     end
   end
 
-  def add_raw_base(content)
+  def add_compressed_base(content)
     base = BaseService.uncompress(content)
     add_base(base.each_with_index.map{ |x, i| "#{x} #{i}" }.join("\n"))
   end
