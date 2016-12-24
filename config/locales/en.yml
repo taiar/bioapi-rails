@@ -36,3 +36,7 @@ en:
   error:
     insert_smarts: 'Please insert a SMARTS pattern or select a functional group to search.'
     invalid_smarts: 'Please insert a valid SMARTS pattern.'
+  found: 'found'
+  results_from: 'Results in'
+  perform_reactions: 'Perform reactions'
+  reactions: 'Reactions'
