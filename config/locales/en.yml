@@ -41,3 +41,8 @@ en:
   perform_reactions: 'Perform reactions'
   reactions: 'Reactions'
   toggle_results: 'toggle results'
+  mol_thead: 'Molecule (click to expand)'
+  formule: 'Formule'
+  molecular_mass: 'Molecular mass'
+  atoms_number: 'Atoms number'
+  rings_number: 'Rings number'
