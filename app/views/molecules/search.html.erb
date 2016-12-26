@@ -1,4 +1,5 @@
 <%= render 'search_form' %>
+
 <hr>
 <h3><%= t 'results_from' %> Base 1 <%= @smarts_b1 %></h3>
 <p>
@@ -13,9 +14,16 @@
   <a class="ui-togglr" data-target="base_2_table">(<%= t 'toggle_results' %>)</a>
 </p>
 <%= render partial: 'molecules_table', locals: { molecules: @molecules_b2, id: 'base_2_table' } %>
+<hr>
 
 <%= form_tag react_molecules_path, method: 'post' do %>
   <input type="hidden" name="b1" value="<%= @dump_b1 %>" />
   <input type="hidden" name="b2" value="<%= @dump_b2 %>" />
+  <label for="reaction"><%= t 'choose_reaction' %>: </label>
+  <select name="reaction" id="reaction">
+    <option value="[C:1](=[O:2])O.[N:3]>>[C:1](=[O:2])[N:3]">Amide formation</option>
+    <option value="[C:1](=[O:2])-[OD1].[N!H0:3]>>[C:1](=[O:2])[N:3]">Amide bond formation</option>
+    <!-- <option value="[C:1]=[C:2].[C:3]=[*:4][*:5]=[C:6]>>[C:1]1[C:2][C:3][*:4]=[*:5][C:6]1">Crazy</option> -->
+  </select>
   <input type="submit" class="btn btn-default" value="<%= t 'perform_reactions' %>" />
 <% end  %>

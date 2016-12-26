@@ -25,7 +25,7 @@ class MoleculesController < ApplicationController
 
   def react
     react = ReactionService.new
-    react.reaction = '[C:1](=[O:2])O.[N:3]>>[C:1](=[O:2])[N:3]'
+    react.reaction = params[:reaction]
     react.add_compressed_base(params[:b1])
     react.add_compressed_base(params[:b2])
     time = Time.now.strftime('%Y%d%m_%H%M%S')
