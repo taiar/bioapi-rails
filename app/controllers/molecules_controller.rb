@@ -28,6 +28,7 @@ class MoleculesController < ApplicationController
     react.reaction = '[C:1](=[O:2])O.[N:3]>>[C:1](=[O:2])[N:3]'
     react.add_compressed_base(params[:b1])
     react.add_compressed_base(params[:b2])
-    @result = react.run
+    time = Time.now.strftime('%Y%d%m_%H%M%S')
+    send_file(react.run, filename: "Reaction_#{time}.xlsx")
   end
 end

@@ -1,10 +1,12 @@
 class ReactionService::Spreadsheet
-  def initialize(run, bases)
+  def initialize(run, bases, rdir)
     @raw_run = run
     @bases = bases
+    @reaction_dir = rdir
   end
 
   def generate
+    result = ''
     Axlsx::Package.new do |p|
       p.workbook.add_worksheet(:name => "Base 1") { |sheet| add_base_sheet(sheet, @bases[0]) }
       p.workbook.add_worksheet(:name => "Base 2") { |sheet| add_base_sheet(sheet, @bases[1]) }
@@ -24,8 +26,10 @@ class ReactionService::Spreadsheet
             BaseService::Filters::HydrogenBondAcceptor.hba(mol)]
         end
       end
-      p.serialize('simple.xlsx')
+      result = "#{@reaction_dir}/result.xlsx"
+      p.serialize(result)
     end
+    result
   end
 
   private

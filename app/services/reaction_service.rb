@@ -42,12 +42,7 @@ class ReactionService
 
   def run
     run = `#{@reactor.to_s} '#{@reaction}' #{@reaction_dir}/0 #{@reaction_dir}/1`
-    ReactionService::Spreadsheet.new(run, @base_mol).generate
-    run
-  end
-
-  def generate_spreadsheet
-
+    ReactionService::Spreadsheet.new(run, @base_mol, @reaction_dir).generate
   end
 
   def amide_formation
