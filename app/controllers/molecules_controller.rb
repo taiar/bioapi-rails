@@ -8,8 +8,8 @@ class MoleculesController < ApplicationController
 
     @molecules_b1 = BaseService.instance.search_smart(params[:base1])
     @molecules_b2 = BaseService.instance.search_smart(params[:base2])
-    @dump_b1 = BaseService.compress(@molecules_b1.map{ |m| m.smiles })
-    @dump_b2 = BaseService.compress(@molecules_b2.map{ |m| m.smiles })
+    @dump_b1 = BaseService.compress(@molecules_b1.map{ |m| [m.smiles, m.title] })
+    @dump_b2 = BaseService.compress(@molecules_b2.map{ |m| [m.smiles, m.title] })
     @smarts_b1 = params[:base1][:smarts]
     @smarts_b2 = params[:base2][:smarts]
   end

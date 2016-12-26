@@ -9,7 +9,8 @@ class ReactionService
     @tmp_dir =  Rails.root.join('tmp/reactions')
     @reaction_id = SecureRandom.uuid
     @reaction_dir = @tmp_dir.join(@reaction_id)
-    @base = []
+    @base_txt = []
+    @base_mol = []
     @base_pos = 0
     check_reaction_dir
   end
@@ -25,21 +26,24 @@ class ReactionService
 
   def add_compressed_base(content)
     base = BaseService.uncompress(content)
-    add_base(base.each_with_index.map{ |x, i| "#{x} #{i}" }.join("\n"))
+    @base_mol << base
+    add_base(base.each_with_index.map{ |x, i| "#{x[0]} #{i}" }.join("\n"))
   end
 
   def add_base(content)
-    @base << content
+    @base_txt << content
     write_base
     @base_pos += 1
   end
 
   def write_base
-    File.open(@reaction_dir.join(@base_pos.to_s).to_s, 'w') { |file| file.write(@base[@base_pos]) }
+    File.open(@reaction_dir.join(@base_pos.to_s).to_s, 'w') { |file| file.write(@base_txt[@base_pos]) }
   end
 
   def run
-    `#{@reactor.to_s} '#{@reaction}' #{@reaction_dir}/0 #{@reaction_dir}/1`
+    run = `#{@reactor.to_s} '#{@reaction}' #{@reaction_dir}/0 #{@reaction_dir}/1`
+    ReactionService::Spreadsheet.new(run, @base_mol).generate
+    run
   end
 
   def generate_spreadsheet
