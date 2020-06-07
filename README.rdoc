@@ -1,28 +1,13 @@
-== README
+== TODO items collected from Ta-da Lists
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+- [] Traduzir todo o projeto para o Inglês
+- [] Identificar as moléculas com o ID ZINC
+- [] Testar base PDB ao invés da base mol 2
+- [] Linkar home no cabeçalho
+- [] Selecionar grupos funcionais em um menu (refatorar para que eles possam ser adicionados em série futuramente)
+- [] Selecionar a reação do smarts em um menu (refatorar para que elas possam ser adicionadas em série futuramente)
+- [] Exibição retrátil dos resultados da filtragem
+- [] Inserir nomes dos grupos funcionais nos resultados
+- [] Exibição de todas as reações
+- [] Exportação em excel do resultado das reações
+- [] Completar valência de moléculas com o Obabel
